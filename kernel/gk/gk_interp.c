@@ -1,5 +1,5 @@
 //ember2819
-#include "gk.h"
+#include <gk/gk.h>
 
 // helpers
 

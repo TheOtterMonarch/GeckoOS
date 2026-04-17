@@ -1,17 +1,18 @@
-#include "commands.h"
-#include "bootoptions.h"
-#include "colors.h"
-#include "drivers/keyboard.h"
-#include "drivers/tables/timer/timer.h"
-#include "layouts/kb_layouts.h"
-#include "terminal/terminal.h"
-#include "gk/gk.h"
-#include "mem.h"
-#include "drivers/ata.h"
-#include "fs/fs.h"
-#include "fs/fat16.h"
-#include "users/users.h"
+#include <commands.h>
+#include <bootoptions.h>
+#include <colors.h>
+#include <drivers/keyboard.h>
+#include <drivers/tables/timer.h>
+#include <layouts/kb_layouts.h>
+#include <terminal/terminal.h>
+#include <gk/gk.h>
+#include <mem.h>
+#include <drivers/ata.h>
+#include <fs/fs.h>
+#include <fs/fat16.h>
+#include <users/users.h>
 #include <stdint.h>
+
 #define PERM_DENIED(color) \
     do { printc("\nPermission denied.\n", VGA_COLOR_RED); return; } while(0)
 

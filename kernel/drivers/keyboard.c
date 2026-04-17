@@ -2,12 +2,13 @@
 
 // PS/2 keyboard driver
 
-#include "keyboard.h"
-#include "../layouts/kb_layouts.h"
-#include "../ports.h"
-#include "../terminal/terminal.h"
-#include "tables/irq/irq.h"
-#include "vga.h"
+#include <drivers/keyboard.h>
+#include <layouts/kb_layouts.h>
+#include <ports.h>
+#include <terminal/terminal.h>
+#include <drivers/tables/irq.h>
+#include <drivers/vga.h>
+
 // Layout map by scancodes.
 // Add layout via set_layout()
 static char ScASCII[128];
@@ -101,6 +102,8 @@ void set_layout(KeyboardLayout layout) {
 
 void keyboard_handler(registers_t* r)
 {
+    (void)r;
+    
     //listen to the key port
     uint8_t scancode = inb(KEYBOARD_DATA_PORT);
 

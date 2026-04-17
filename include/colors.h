@@ -2,7 +2,7 @@
 #ifndef COLORS_H
 #define COLORS_H
 
-#include "drivers/vga.h"
+#include <drivers/vga.h>
 #include <stdint.h>
 
 extern const uint8_t BG_COLOR;

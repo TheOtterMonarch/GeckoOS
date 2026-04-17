@@ -1,6 +1,6 @@
 // Added by MorganPG1 to centralise colors
-#include "colors.h"
-#include "drivers/vga.h"
+#include <colors.h>
+#include <drivers/vga.h>
 #include <stdint.h>
 
 const uint8_t BG_COLOR = VGA_COLOR_BLACK;

@@ -1,8 +1,10 @@
 #ifndef DRIVES_H
 #define DRIVES_H
-#include "stdint.h"
-#include "../mem.h"
-#include "../partition/partition.h"
+
+#include <stdint.h>
+#include <mem.h>
+#include <sys/types.h>
+#include <partition/partition.h>
 
 struct kdrive_t;
 

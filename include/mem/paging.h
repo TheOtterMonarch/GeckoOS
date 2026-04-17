@@ -4,6 +4,7 @@
  *
  */
 #include <stdint.h>
+#include <stdbool.h>
 
 #define PAGE_SIZE            4096
 #define PAGES_PER_TABLE      1024

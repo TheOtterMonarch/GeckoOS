@@ -11,7 +11,7 @@ TRUNC_AMNT = 131072
 # Objcopy (to translate elf to bin)
 OBJCOPY = objcopy
 OBJCOPY_ARGS = -O binary
-include_folder = kernel/include kernel/drivers kernel
+include_folder = include
 CC_FLAGS = -target i386-elf -march=i686 -m32 -ffreestanding -nostdlib -fno-builtin -fno-stack-protector -g -c $(addprefix -I,$(include_folder))
 AS_FLAGS = -f bin
 LD_FLAGS = -m elf_i386

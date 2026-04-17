@@ -1,16 +1,15 @@
 //#include "kernel.h"
-#include "drivers/tables/idt/idt.h"
-#include "drivers/tables/idt/idt.h"
-#include "drivers/tables/irq/irq.h"
-#include "drivers/tables/timer/timer.h"
-#include "drivers/vga.h"
-#include "drivers/keyboard.h"
-#include "drivers/drives.h"
-#include "layouts/kb_layouts.h"
-#include "terminal/terminal.h"
-#include "commands.h"       // Included by Ember2819: Adds commands
-#include "colors.h"         // Added by MorganPG1 to centralise colors into one file
-#include "users/users.h"    // ember2819: user & permission system
+#include <drivers/tables/idt.h>
+#include <drivers/tables/irq.h>
+#include <drivers/tables/timer.h>
+#include <drivers/vga.h>
+#include <drivers/keyboard.h>
+#include <drivers/drives.h>
+#include <layouts/kb_layouts.h>
+#include <terminal/terminal.h>
+#include <commands.h>       // Included by Ember2819: Adds commands
+#include <colors.h>         // Added by MorganPG1 to centralise colors into one file
+#include <users/users.h>    // ember2819: user & permission system
 #include <stdint.h>
 
 void process_input(unsigned char *buffer) {

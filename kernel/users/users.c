@@ -1,8 +1,8 @@
 //ember2819
-#include "users.h"
-#include "../mem.h"
-#include "../terminal/terminal.h"
-#include "../drivers/vga.h"
+#include <users/users.h>
+#include <mem.h>
+#include <terminal/terminal.h>
+#include <drivers/vga.h>
 #include <stdint.h>
 
 static user_t    user_table[MAX_USERS];

@@ -1,5 +1,5 @@
-#include "fs.h"
-#include "fat16.h"
+#include <fs/fat16.h>
+#include <fs/fs.h>
 
 struct drive_fs_t *fs_drive_open( struct kdrive_t *drive )
 {

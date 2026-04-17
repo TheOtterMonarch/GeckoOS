@@ -3,9 +3,9 @@
 #define FAT16_H
 
 #include <stdint.h>
-#include "../partition/partition.h"
-#include "../drivers/drives.h"
-#include "fs.h"
+#include <partition/partition.h>
+#include <drivers/drives.h>
+#include <fs/fs.h>
 
 struct drive_fs_t *fat16_drive_open( struct kdrive_t *drive, struct partition_t *partition );
 

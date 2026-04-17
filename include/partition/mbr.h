@@ -1,6 +1,7 @@
 #ifndef MBR_H
 #define MBR_H
-#include "partition.h"
+
+#include <partition/partition.h>
 
 struct mbr_partition_t
 {

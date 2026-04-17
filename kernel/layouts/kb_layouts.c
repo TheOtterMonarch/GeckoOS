@@ -1,5 +1,5 @@
 // Added by MorganPG1 to make implementation of https://github.com/Ember2819/Random-People-Coding-Stuff/issues/32 easier
-#include "kb_layouts.h"
+#include <layouts/kb_layouts.h>
 
 KeyboardLayout LAYOUTS[] = {
     { // US QWERTY

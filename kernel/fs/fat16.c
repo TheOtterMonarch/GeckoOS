@@ -1,10 +1,10 @@
-#include "fat16.h"
-#include "../drivers/ata.h"
-#include "../mem.h"
-#include "../terminal/terminal.h"
-#include "../colors.h"
-#include "../partition/partition.h"
-#include "fs.h"
+#include <fs/fat16.h>
+#include <drivers/ata.h>
+#include <mem.h>
+#include <terminal/terminal.h>
+#include <colors.h>
+#include <partition/partition.h>
+#include <fs/fs.h>
 #include <stdint.h>
 
 typedef struct __attribute__((packed)) {

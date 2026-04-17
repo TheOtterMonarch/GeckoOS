@@ -1,5 +1,5 @@
-#include "vga.h"
-#include "../ports.h"
+#include <drivers/vga.h>
+#include <ports.h>
 
 uint8_t TERMINAL_COLOR;
 

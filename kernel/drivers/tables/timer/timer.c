@@ -1,10 +1,9 @@
 // Pumpkicks
 
-#include <stdint.h>
-#include "../../../terminal/terminal.h" // for printf
-#include "../isr/isr.h"
-#include "../../../colors.h"
-#include "../irq/irq.h"
+#include <terminal/terminal.h> // for printf
+#include <drivers/tables/isr.h>
+#include <colors.h>
+#include <drivers/tables/irq.h>
 
 int timer_ticks = 0;
 int actual_hz = 50; // Set to 50 as the default

@@ -1,8 +1,8 @@
 #ifndef TERMINAL_H
 #define TERMINAL_H
 
-#include "../drivers/keyboard.h"
-#include "../drivers/vga.h"
+#include <drivers/keyboard.h>
+#include <drivers/vga.h>
 
 #define HISTORY_SIZE 10
 static unsigned char history_entries[HISTORY_SIZE][512];

@@ -1,7 +1,7 @@
-#include "mem.h"
-#include "drivers/vga.h"
-#include "gk/gk.h"
-#include "terminal/terminal.h"
+#include <mem.h>
+#include <drivers/vga.h>
+#include <gk/gk.h>
+#include <terminal/terminal.h>
 #include <stdalign.h>
 
 void *memcpy(void *dest, const void *src, unsigned long n) {

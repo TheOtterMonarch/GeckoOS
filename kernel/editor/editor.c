@@ -1,10 +1,10 @@
 //ember2819
-#include "editor.h"
-#include "../terminal/terminal.h"
-#include "../drivers/vga.h"
-#include "../drivers/keyboard.h"
-#include "../fs/fs.h"
-#include "../fs/fat16.h"
+#include <editor/editor.h>
+#include <terminal/terminal.h>
+#include <drivers/vga.h>
+#include <drivers/keyboard.h>
+#include <fs/fat16.h>
+#include <fs/fs.h>
 #include <stdint.h>
 #include <stddef.h>
 #include <stdbool.h>

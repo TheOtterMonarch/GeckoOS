@@ -1,8 +1,8 @@
-#include "../drivers/keyboard.h"
-#include "../drivers/vga.h"
-#include "../mem.h"
-#include "terminal.h"
-#include "../gk/gk.h"
+#include <drivers/keyboard.h>
+#include <drivers/vga.h>
+#include <mem.h>
+#include <terminal/terminal.h>
+#include <gk/gk.h>
 #include <stdint.h>
 
 uint16_t terminal_column = 0; 

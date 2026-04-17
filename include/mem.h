@@ -14,7 +14,6 @@ struct block{
     
 };
 
-
 void* memcpy(void* dest, const void* src, unsigned long n);
 
 static block* find_free_block(unsigned long size) ;
@@ -34,7 +33,10 @@ void combine_blocks();
 extern unsigned long memend; // The memory size from the 0x1000
 int strlen(char* ptr);
 
+// these are defined in <stddef.h>
+/*
 typedef unsigned int size_t;
 typedef int ssize_t;
+*/
 
 #endif

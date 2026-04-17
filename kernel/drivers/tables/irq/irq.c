@@ -1,7 +1,7 @@
-#include "../isr/isr.h"
-#include "../../../ports.h"
-#include "../idt/idt.h"
-#include "../../../terminal/terminal.h"
+#include <drivers/tables/isr.h>
+#include <ports.h>
+#include <drivers/tables/idt.h>
+#include <terminal/terminal.h>
 #include <stdint.h>
 
 extern void irq0();

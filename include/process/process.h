@@ -1,6 +1,6 @@
 #pragma once
-#include "../drivers/tables/isr/isr.h"
-#include "mem/virtual_mem/paging.h"
+#include <drivers/tables/isr.h>
+#include <mem/paging.h>
 #include <stdint.h>
 
 typedef enum {

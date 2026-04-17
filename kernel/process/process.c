@@ -1,13 +1,13 @@
-#include "process.h"
-#include "fs/fs.h"
-#include "gk/gk.h"
-#include "mem/mem.h"
-#include "mem/physical_mem/physical_mem.h"
-#include "mem/virtual_mem/paging.h"
-#include "ports.h"
-#include "stdint.h"
-#include "tables/isr/isr.h"
-#include "vga.h"
+#include <process/process.h>
+#include <fs/fs.h>
+#include <gk/gk.h>
+#include <mem.h>
+#include <mem/physical_mem.h>
+#include <mem/paging.h>
+#include <ports.h>
+#include <stdint.h>
+#include <drivers/tables/isr.h>
+#include <drivers/vga.h>
 
 #define MAX_PROCESSES 16
 

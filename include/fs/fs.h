@@ -1,10 +1,10 @@
 #ifndef DRIVE_FS_H
 #define DRIVE_FS_H
 
-#include "../mem.h"
-#include "../partition/partition.h"
-#include "../drivers/drives.h"
-#include "stdint.h"
+#include <mem.h>
+#include <partition/partition.h>
+#include <drivers/drives.h>
+#include <stdint.h>
 #define FILENAME_MAX 256
 
 // nfoxers - forward declaration to fix -Wvisibility

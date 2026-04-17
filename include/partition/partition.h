@@ -1,5 +1,6 @@
 #ifndef PARTITION_H
 #define PARTITION_H
+
 #include "stdint.h"
 
 enum partition_fs_t
@@ -30,7 +31,5 @@ struct partition_table_t
 	uint8_t count;
 	struct partition_t *partitions;
 };
-
-
 
 #endif

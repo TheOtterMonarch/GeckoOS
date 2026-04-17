@@ -1,5 +1,5 @@
-#include "isr.h"
-#include "../../../terminal/terminal.h"
+#include <drivers/tables/isr.h>
+#include <terminal/terminal.h>
 
 void isr_handler(registers_t regs)
 {

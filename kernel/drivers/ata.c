@@ -1,9 +1,9 @@
 //Ember2819
-#include "ata.h"
-#include "../ports.h"
+#include <drivers/ata.h>
+#include <ports.h>
 #include <stdint.h>
-#include "drives.h"
-#include "../terminal/terminal.h"
+#include <drivers/drives.h>
+#include <terminal/terminal.h>
 
 static int drive_present[2] = {0, 0};
 

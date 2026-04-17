@@ -1,8 +1,6 @@
 #pragma once
 #include <stdint.h>
 
-
-
 void free_blocks(const uint32_t *address, const uint32_t num_blocks);
 void set_block(const uint32_t bit);
 void *allocate_blocks(const uint32_t num_blocks);

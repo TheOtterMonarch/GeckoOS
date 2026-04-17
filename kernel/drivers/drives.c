@@ -1,9 +1,8 @@
-#include "drives.h"
-#include "../mem.h"
-#include "ata.h"
-#include "../terminal/terminal.h"
-#include "../drivers/drives.h"
-#include "../partition/mbr.h"
+#include <drivers/drives.h>
+#include <mem.h>
+#include <drivers/ata.h>
+#include <terminal/terminal.h>
+#include <partition/mbr.h>
 
 static struct kdrive_t drives[32];
 

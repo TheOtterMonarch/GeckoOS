@@ -3,7 +3,7 @@
 #define EDITOR_H
 
 #include <stdint.h>
-#include "../fs/fs.h"
+#include <fs/fs.h>
 
 // Maximum file size the editor can handle
 #define EDITOR_MAX_FILESIZE 4096

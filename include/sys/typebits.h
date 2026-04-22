@@ -22,6 +22,7 @@
 
 #ifndef _BITS_TYPES_H
 #define _BITS_TYPES_H 1
+
 /* Determine the wordsize from the preprocessor defines.  */
 
 #define __WORDSIZE                32

@@ -1,3 +1,4 @@
+#include "terminal/printf.h"
 #include <commands.h>
 #include <bootoptions.h>
 #include <colors.h>
@@ -12,6 +13,7 @@
 #include <fs/fat16.h>
 #include <users/users.h>
 #include <stdint.h>
+#include <drivers/pci.h>
 
 #define PERM_DENIED(color) \
     do { printc("\nPermission denied.\n", VGA_COLOR_RED); return; } while(0)
@@ -33,6 +35,7 @@ static Command commands[] = {
     { "chars",        cmd_chars        },
     { "uptime",       cmd_uptime       },
     { "meminfo",      cmd_meminfo      },
+    { "lspci",        cmd_lspci        },
     // --- keyboard ---
     { "setkeyswe",    cmd_setkeyswe    },
     { "setkeyus",     cmd_setkeyus     },
@@ -714,6 +717,12 @@ static void cmd_gk_run_file(const char* filename, uint8_t color) {
     printc("\n", color);
     gk_init(&gk_state);
     gk_run(&gk_state, src_buf);
+}
+
+static void cmd_lspci(uint8_t color) {
+    printkf("\n");
+    (void)color;
+    pci_lspci();
 }
 
 //login prmopt

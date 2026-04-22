@@ -3,6 +3,7 @@
 #include <mem/physical_mem.h>
 #include <stdbool.h>
 #include <mem/paging.h>
+#include <stddef.h>
 
 static page_directory_t *current_page_directory = 0;
 static physical_address_t current_pd_adress     = 0;

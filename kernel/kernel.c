@@ -11,6 +11,7 @@
 #include <colors.h>         // Added by MorganPG1 to centralise colors into one file
 #include <users/users.h>    // ember2819: user & permission system
 #include <stdint.h>
+#include <drivers/pci.h>
 
 void process_input(unsigned char *buffer) {
     run_command(buffer, TERM_COLOR);
@@ -44,6 +45,7 @@ void _entry() {
     printc("Test completed!\n", VGA_COLOR_LIGHT_GREY);
 
     drives_init();
+    enumerate_pci();
 
     users_init();
     printc("User system initialised. Default accounts: root / guest\n", VGA_COLOR_LIGHT_GREY);

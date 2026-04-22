@@ -62,6 +62,9 @@ static void cmd_write(uint8_t color);
 static void cmd_uptime(uint8_t color);
 static void cmd_meminfo(uint8_t color);
 
+// low level stuff
+static void cmd_lspci(uint8_t color);
+
 // Dispatcher
 static int streq(unsigned char *a, char *b);
 void run_command(unsigned char *input, uint8_t color);

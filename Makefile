@@ -12,7 +12,7 @@ TRUNC_AMNT = 131072
 OBJCOPY = objcopy
 OBJCOPY_ARGS = -O binary
 include_folder = include
-CC_FLAGS = -target i386-elf -march=i686 -m32 -ffreestanding -nostdlib -fno-builtin -fno-stack-protector -g -c $(addprefix -I,$(include_folder))
+CC_FLAGS = -target i386-elf -march=i686 -m32 -MMD -MP -ffreestanding -nostdlib -fno-builtin -fno-stack-protector -g -c $(addprefix -I,$(include_folder))
 AS_FLAGS = -f bin
 LD_FLAGS = -m elf_i386
 
@@ -22,6 +22,8 @@ SOURCES := $(shell find ./kernel -name "*.c" -o -name "*.s")
 OBJECTS := $(patsubst ./kernel/%.c,./build/%.o, $(SOURCES))
 # then all the .s's, name change to avoid conflict with .c sources w the same name
 OBJECTS := $(patsubst ./kernel/%.s,./build/%_s.o, $(OBJECTS))
+
+DEPS := $(OBJECTS:.o=.d)
 
 # Builds the final disk image
 all: os.img
@@ -56,6 +58,8 @@ kernel.bin: kernel.elf
 	$(TRUNCATE) -s $(TRUNC_AMNT) kernel.bin
 os.img: bootloader/boot.bin kernel.bin
 	cat bootloader/boot.bin kernel.bin > os.img
+
+-include $(DEPS)
 
 # Launch the image in QEMU
 run: os.img

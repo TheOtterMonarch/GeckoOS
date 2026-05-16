@@ -7,6 +7,18 @@ MULTIBOOT2_ARCH     equ 0
 HEADER_LENGTH       equ (mb2_header_end - mb2_header_start)
 HEADER_CHECKSUM     equ -(MULTIBOOT2_MAGIC + MULTIBOOT2_ARCH + HEADER_LENGTH)
 
+MULTIBOOT1_MAGIC    equ 0x1BADB002
+MULTIBOOT1_FLAGS    equ 0x3
+MULTIBOOT1_CHECKSUM equ -(MULTIBOOT1_MAGIC + MULTIBOOT1_FLAGS)
+
+; ── Multiboot1 header (v86 / legacy bootloaders) ─────────────────────────
+section .multiboot1_header
+align 4
+    dd MULTIBOOT1_MAGIC
+    dd MULTIBOOT1_FLAGS
+    dd MULTIBOOT1_CHECKSUM
+
+; ── Multiboot2 header (GRUB on real hardware / QEMU) ─────────────────────
 section .multiboot2_header
 align 8
 mb2_header_start:
@@ -54,7 +66,7 @@ extern multiboot2_main
 
 multiboot2_entry:
     ; Save magic and MBI pointer FIRST before anything clobbers them
-    mov edi, eax        ; edi = magic
+    mov edi, eax        ; edi = magic  (0x36D76289 = MB2, 0x2BADB002 = MB1)
     mov esi, ebx        ; esi = mbi_addr
 
     ; Install our GDT
@@ -75,7 +87,7 @@ multiboot2_entry:
     push 0
     popfd
 
-    ; Restore and pass to C
+    ; Pass both values to C — multiboot2_main now handles both magic values
     push esi            ; mbi_addr
     push edi            ; magic
     call multiboot2_main

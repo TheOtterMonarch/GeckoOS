@@ -32,17 +32,17 @@ A collaborative OS project where contributors build a custom operating system fr
 
 **Fedora:**
 ```bash
-sudo dnf install clang nasm binutils grub2-tools-extra xorriso qemu-system-x86 -y
+sudo dnf install clang nasm binutils grub2-tools-extra xorriso qemu-system-x86  -y
 ```
 
 **Arch Linux:**
 ```bash
-sudo pacman -S clang nasm binutils grub xorriso qemu-system-x86
+sudo pacman -S clang nasm binutils grub xorriso qemu-system-x86 
 ```
 
 **Debian / Ubuntu / any APT-based distro:**
 ```bash
-sudo apt install clang nasm binutils grub-common xorriso qemu-system-x86 -y
+sudo apt install clang nasm binutils grub-common xorriso qemu-system-x86 mtools grub2 -y
 ```
 
 ---

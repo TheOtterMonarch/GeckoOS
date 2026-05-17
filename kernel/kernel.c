@@ -1,3 +1,4 @@
+#include "drivers/mouse.h"
 #include <drivers/tables/idt.h>
 #include <drivers/tables/irq.h>
 #include <drivers/tables/timer.h>
@@ -35,6 +36,8 @@ void _entry() {
     printc("Enabling Timer (50Hz)...\n", VGA_COLOR_LIGHT_GREY);
     timer_install();
     keyboard_install();
+    mouse_init();
+    terminal_init();
     timer_phase(50);
 
     printc("Testing interruption...\n", VGA_COLOR_LIGHT_GREY);

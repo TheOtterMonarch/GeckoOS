@@ -547,7 +547,7 @@ static void cmd_gk_run_file(const char* filename, uint8_t color) {
 }
 
 static void cmd_lspci(uint8_t color) {
-    printkf("\n");
+    printf("\n");
     (void)color;
     pci_lspci();
 }

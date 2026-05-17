@@ -202,7 +202,7 @@ void pci_lspci() { // ras syndrome ahh name
   while (cur) {
     struct pci_dev *dev = cur->devices;
     while (dev) {
-      printkf("%02x:%02x.%d %s\n", dev->bus->primary, PCI_DEV(dev->devfn),
+      printf("%02x:%02x.%d %s\n", dev->bus->primary, PCI_DEV(dev->devfn),
               PCI_FN(dev->devfn), class2str(dev->class & 0xff));
 
       dev = dev->sibling;

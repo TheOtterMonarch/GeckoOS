@@ -13,7 +13,7 @@
 
 #include "terminal/npf.h"
 
-int printkf(const char *fmt, ...);
-int snprintkf(char *buf, size_t siz, const char *fmt, ...);
+int printf(const char *fmt, ...);
+int snprintf(char *buf, size_t siz, const char *fmt, ...);
 
 #endif
